@@ -1,0 +1,15 @@
+[Unit]
+Description=CloudCart Flask API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/opt/cloudcart/backend
+EnvironmentFile=/etc/cloudcart.env
+ExecStart=/opt/cloudcart/backend/.venv/bin/gunicorn --bind 0.0.0.0:5000 --workers 2 --threads 4 app:app
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

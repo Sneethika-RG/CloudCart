@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CloudCart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>🛒 CloudCart</h1><span id="cartCount">Cart: 0</span></header>
+  <main>
+    <section id="products" class="grid"></section>
+    <section class="panel">
+      <h2>Your cart</h2>
+      <ul id="cartList"></ul>
+      <p>Total: ₹<span id="cartTotal">0</span></p>
+      <input id="name" placeholder="Your name">
+      <input id="email" type="email" placeholder="Email (fake is fine)">
+      <button id="orderBtn">Place demo order</button>
+      <p id="msg"></p>
+      <small>Demo only. No payment. Don't enter real data.</small>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
